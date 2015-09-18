@@ -16,4 +16,13 @@ public class MoneyTest {
 		
 		assertThat(money1.subtract(money2), is(expected));
 	}
+	
+	@Test
+	public void testMoneyLessThan7ExpectedFalse(){
+		Money money1 = new Money(7,"PLN");
+		Money money2 = new Money(2,"PLN");
+		
+		
+		assertThat(money1.lessThan(money2), is(false));
+	}
 }
