@@ -55,4 +55,12 @@ public class MoneyTest {
 		
 		assertThat(money1.lessOrEquals(money2), is(true));
 	}
+	
+	@Test
+	public void testMoneyEquals4ExpectedFalse(){
+		Money money1 = new Money(6,"PLN");
+		Money money2 = new Money(4,"PLN");
+		
+		assertThat(money1.lessOrEquals(money2), is(false));
+	}
 }
