@@ -42,6 +42,13 @@ public class MoneyTest {
 	}
 	
 	@Test
+	public void testMoneyGreaterThan5ExpectedFalse(){
+		Money money1 = new Money(2,"PLN");
+		Money money2 = new Money(5,"PLN");
+		
+		assertThat(money1.greaterThan(money2), is(false));
+	}
+	@Test
 	public void testMoneyEquals4ExpectedTrue(){
 		Money money1 = new Money(4,"PLN");
 		Money money2 = new Money(4,"PLN");
