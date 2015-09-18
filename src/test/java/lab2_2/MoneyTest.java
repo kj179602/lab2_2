@@ -62,5 +62,16 @@ public class MoneyTest {
 		Money money2 = new Money(4,"PLN");
 		
 		assertThat(money1.lessOrEquals(money2), is(false));
+		
 	}
+	
+	@Test
+	public void testMoneyAddExpectedTrue(){
+		Money money1 = new Money(12,"PLN");
+		Money money2 = new Money(13,"PLN");
+		Money expected = new Money(25,"PLN");
+		
+		assertThat(money1.add(money2), is(expected));
+	}
+	
 }
