@@ -22,7 +22,6 @@ public class MoneyTest {
 		Money money1 = new Money(7,"PLN");
 		Money money2 = new Money(2,"PLN");
 		
-		
 		assertThat(money1.lessThan(money2), is(false));
 	}
 	
@@ -31,7 +30,14 @@ public class MoneyTest {
 		Money money1 = new Money(6,"PLN");
 		Money money2 = new Money(5,"PLN");
 		
-		
 		assertThat(money1.greaterThan(money2), is(true));
+	}
+	
+	@Test
+	public void testMoneyEquals4ExpectedTrue(){
+		Money money1 = new Money(4,"PLN");
+		Money money2 = new Money(4,"PLN");
+		
+		assertThat(money1.lessOrEquals(money2), is(true));
 	}
 }
